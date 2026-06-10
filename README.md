@@ -52,6 +52,7 @@ catherine-ml-portfolio/
 └── end-to-end-projects/
 
 
+
 Each project contains:
 - A dedicated README  
 - Notebooks (`notebooks/`)  
