@@ -77,6 +77,6 @@ This project demonstrates the importance of:
 
 ## 📁 Repository Contents
 
-- `notebook.ipynb` — full analysis and modeling workflow  
+- `vehicle-price-prediction.ipynb` — full analysis and modeling workflow  
 - `data/` — cleaned dataset (if allowed)  
 - `README.md` — project overview  
