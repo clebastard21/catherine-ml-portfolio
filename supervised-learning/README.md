@@ -15,7 +15,9 @@ The goal of this project is to understand which factors most influence vehicle p
 
 - Removed duplicates and irrelevant columns  
 - Handled missing values  
-- Encoded categorical variables using one‑hot encoding  
+- Encoded categorical variables  
+  - One‑hot encoding for baseline models  
+  - Native categorical handling for CatBoost  
 - Scaled numerical features  
 - Split data into training and testing sets  
 
@@ -24,23 +26,30 @@ The goal of this project is to understand which factors most influence vehicle p
 ## 🤖 3. Models Trained
 
 ### **Linear Regression**
-- Simple, interpretable baseline model  
-- Works well with high‑dimensional one‑hot encoded data  
+- Simple, interpretable baseline  
+- Performs reasonably well on linear relationships  
 
 ### **Random Forest Regressor**
 - Nonlinear ensemble model  
-- In theory captures interactions and complex relationships  
+- Struggles with high‑cardinality categorical features  
+
+### **CatBoost Regressor**
+- Gradient boosting model designed for tabular data  
+- Handles categorical variables natively  
+- Achieved the best performance by a wide margin  
 
 ---
 
 ## 📈 4. Model Performance
 
-| Model | MAE | RMSE | R² |
-|-------|---------|-----------|---------|
-| **Linear Regression** | 6036 | 8831 | **0.633** |
-| **Random Forest** | 10964 | 14036 | **0.074** |
+| Model              | MAE     | RMSE    | R²     |
+|-------------------|---------|---------|--------|
+| Linear Regression  | 6036    | 8831    | 0.633  |
+| Random Forest      | 10964   | 14036   | 0.074  |
+| **CatBoost**       | **807** | **1777** | **0.985** |
 
-**Linear Regression significantly outperformed Random Forest**, indicating that the dataset is largely linear and that high‑cardinality categorical variables make tree‑based models struggle.
+CatBoost dramatically outperformed all other models, achieving an R² of 0.985 and the lowest error metrics.  
+Its ability to process categorical features without one‑hot encoding makes it ideal for this dataset.
 
 ---
 
@@ -49,29 +58,32 @@ The goal of this project is to understand which factors most influence vehicle p
 - Newer vehicles and lower mileage strongly increase price  
 - Condition and manufacturer are major value drivers  
 - Trucks, SUVs, and AWD/4WD vehicles tend to be priced higher  
-- Simpler models can outperform complex ones when data structure is linear  
+- CatBoost reveals complex interactions that simpler models miss  
+- High‑cardinality categorical features require models that handle them natively  
 
 ---
 
 ## 📝 6. Conclusion
 
-Linear Regression proved to be the most effective model for this dataset, achieving an R² of ~0.63.  
-Random Forest performed poorly due to the extremely high‑dimensional one‑hot encoded feature space.
+CatBoost proved to be the most effective model for this dataset, achieving an R² of ~0.985 and significantly lower error metrics than both Linear Regression and Random Forest.
 
 This project demonstrates the importance of:
-- establishing a strong baseline model  
-- understanding data structure  
+
 - choosing models that align with feature types  
+- understanding the limitations of one‑hot encoding  
+- establishing a strong baseline before moving to advanced models  
+- using modern boosting algorithms for tabular data  
 
 ---
 
 ## 🚀 7. Future Improvements
 
-- Try CatBoost or LightGBM (handle categorical data natively)  
-- Add interaction features (e.g., year × mileage)  
+- Hyperparameter tuning for CatBoost  
+- SHAP value analysis for deeper interpretability  
+- Add interaction features (e.g., age × mileage)  
 - Reduce high‑cardinality categories using target encoding  
-- Tune hyperparameters for improved performance  
 - Incorporate geographic or market‑based features  
+- Deploy the model as an API or dashboard  
 
 ---
 
