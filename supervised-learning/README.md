@@ -87,8 +87,20 @@ This project demonstrates the importance of:
 
 ---
 
+## 📁 8. Dataset Access & Usage
+
+This project uses the **Craigslist Vehicle Dataset** from Kaggle.  
+Because GitHub does not allow uploading very large files (over 100 MB), the full dataset is **not included** in this repository.
+
+Instead, you can download it directly from Kaggle using the link or the Kaggle API.
+
+### 🔗 Dataset Source
+**Craigslist Vehicle Dataset**  
+https://www.kaggle.com/code/mohanadyehia49/car-price-prediction-on-craigslist-cars-dataset/input
+
+---
+
 ## 📁 Repository Contents
 
 - `vehicle-price-prediction.ipynb` — full analysis and modeling workflow  
-- `data/` — cleaned dataset (if allowed)  
 - `README.md` — project overview  
