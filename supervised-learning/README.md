@@ -87,7 +87,7 @@ This project demonstrates the importance of:
 
 ---
 
-## 📁 8. Dataset Access & Usage
+## 📦 Dataset Access & Usage
 
 This project uses the **Craigslist Vehicle Dataset** from Kaggle.  
 Because GitHub does not allow uploading very large files (over 100 MB), the full dataset is **not included** in this repository.
