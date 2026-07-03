@@ -15,16 +15,16 @@ My goal is to demonstrate:
 ## 🚀 Featured Projects
 
 ### **1. Car Price Prediction (Regression)**
-Predicting used car prices using feature engineering, regression models, and model comparison.  
-📂 `supervised-learning/regression/car-price-prediction`
+Predicting used car prices using feature engineering, machine learning models, and model comparison.  
+📂 `supervised-learning/vehicle-price-prediction`
 
-### **2. Customer Churn Prediction (Classification)**
-End‑to‑end pipeline: EDA → preprocessing → model training → evaluation → insights.  
-📂 `supervised-learning/classification/customer-churn`
+### **2. Truck Maintenance Prediction (Classification)**
+Classify trucks into “needs maintenance soon” vs. “healthy”  .  
+📂 `supervised-learning/classification/truck-maintenance-prediction`
 
-### **3. Customer Segmentation (Unsupervised Learning)**
-K‑Means clustering to identify customer groups for marketing strategy.  
-📂 `unsupervised-learning/customer-segmentation`
+### **3. Unsupervised Driving Event Discovery (Clustering)**
+Discover hidden driving behaviors—such as braking, acceleration, cruising, stop‑and‑go, and high‑power events—directly from raw telematics time‑series using unsupervised learning. 
+📂 `unsupervised-learning/driving-event-discovery`
 
 ### **4. CNN Image Classifier (Deep Learning)**
 Image classification using Convolutional Neural Networks.  
